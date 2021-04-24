@@ -1,0 +1,8 @@
+1)
+• We call the uncertainty in data as noise. One of the best way to refine data is by denoising it by applying filters
+• Filtering is a simple technique that we can use to smooth out the signal
+• Some common filtering techniques are applying Low Pass Filter, High Pass Filter which can calculated by moving averages
+
+2)
+• Also we can match the location from local sensory data with Global GPS for better navigation
+
