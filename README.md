@@ -30,7 +30,3 @@ Online
 
 • But used to watch some ML videos on YouTube
 
-SECTION A - Q4
---------------
-![Screenshot from 2021-04-24 12-40-42](https://user-images.githubusercontent.com/79641410/115966963-95400e00-a54d-11eb-9cbe-35a56f20fe46.png)
-
