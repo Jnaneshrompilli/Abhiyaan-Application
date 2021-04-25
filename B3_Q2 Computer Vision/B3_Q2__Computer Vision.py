@@ -18,7 +18,7 @@ import cv2 as  cv
 import numpy as np
 
 # Capturing video
-cap = cv.VideoCapture('videos\pedestrians.mp4')
+cap = cv.VideoCapture('videos\pedestrians.mp4')  #Input your Video
 frame_width = int( cap.get(cv.CAP_PROP_FRAME_WIDTH))
 frame_height =int( cap.get( cv.CAP_PROP_FRAME_HEIGHT))
 
