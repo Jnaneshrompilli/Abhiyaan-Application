@@ -110,9 +110,9 @@ class TurtleBot:
         # goal_pose.y = float(input("Enter y limit (<10) : "))
         # tolerance = float(input("Set your tolerance (0.05<tol<1): "))
 
-        # Stopping program for 1 sec
+        # Stopping program for 2 sec
         # To get messages (location of turtles) from publishers as they publish with gap of 0.1 sec
-        time.sleep(1)
+        time.sleep(2)
 
         vel_msg = Twist()
 
@@ -151,6 +151,7 @@ class TurtleBot:
 
                 # After some time
                 # Angular velocity in anti-clockwise to again align turtle2 in right direction
+                # Condition satisfies untill it alligns in a straight line
                 elif (
                     abs(self.angle_difference()) > (theta_diff_initial + 0.75)
                     and abs((self.pose2.theta - theta_initial)) > 0.01
