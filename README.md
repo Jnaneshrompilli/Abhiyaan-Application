@@ -30,3 +30,8 @@ Online
 
 • But used to watch some ML videos on YouTube
 
+Resources Used for this application
+-----------------------------------
+1) ROS Tutorials provided in the application
+2) ProgrammingKnowledge (YouTube Channel)
+
