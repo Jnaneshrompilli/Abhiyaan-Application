@@ -18,9 +18,10 @@ target = Image in which we want to detect objects
 import numpy as np
 import cv2 as cv
 
-roi = cv.imread("images\\base_obj.png")
+roi = cv.imread("images\\base_obj.png") # Input images of object we want to detect
 hsv = cv.cvtColor(roi, cv.COLOR_BGR2HSV)
-target = cv.imread("images\\abhiyan_appl.png")
+
+target = cv.imread("images\\abhiyan_appl.png") #Input target Image
 hsvt = cv.cvtColor(target, cv.COLOR_BGR2HSV)
 
 # calculating object histogram
