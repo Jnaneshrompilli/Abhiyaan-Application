@@ -30,13 +30,15 @@ def callback(team_abhiyaan,autonomy):
 
 
 def listener():
-
+     
+    # anonymous  = True for ROS to create a unique identity for this node
     rospy.init_node('listener_n', anonymous=True)
 
-    # Appending two messages based on approximate time stamp method
+    # Subscribing to both the nodes
     node_1 = message_filters.Subscriber('team_abhiyaan', String)
     node_2 = message_filters.Subscriber('autonomy', String)
     
+    # Appending two messages based on approximate time stamp method
     # Messages within 1 sec will get appended
     ts = message_filters.ApproximateTimeSynchronizer([node_1, node_2], 10, 1, allow_headerless=True)
     ts.registerCallback(callback)
