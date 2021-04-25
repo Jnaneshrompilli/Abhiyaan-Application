@@ -24,15 +24,18 @@ from std_msgs.msg import String
 # Function publishing topic
 def talker():
     pub = rospy.Publisher('autonomy',String,queue_size=10)
+    # Registering our node in ROS with unique identity
     rospy.init_node('talker_n2',anonymous=True)
-    # Rate at which function publishes
+    # Rate at which function publishes (1 msg/sec)
     rate = rospy.Rate(1)
 
     # Runs utill we shut down the Node
     while not rospy.is_shutdown():
+        # Message to be published
         msg_str = "Fueled By Autonomy"
         rospy.loginfo(msg_str)
         pub.publish(msg_str)
+        # Rate (1 msg/sec)
         rate.sleep()
 
 
