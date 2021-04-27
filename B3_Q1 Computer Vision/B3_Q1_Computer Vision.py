@@ -18,11 +18,37 @@ target = Image in which we want to detect objects
 import numpy as np
 import cv2 as cv
 
-roi = cv.imread("images\\base_obj.png") # Input images of object we want to detect
-hsv = cv.cvtColor(roi, cv.COLOR_BGR2HSV)
 
-target = cv.imread("images\\abhiyan_appl.png") #Input target Image
-hsvt = cv.cvtColor(target, cv.COLOR_BGR2HSV)
+roi = cv.imread(
+    r"C:\Users\Admin\Desktop\ML_Projects\Image rec\images\base_obj.png"
+)  # Input images of object we want to detect
+
+
+# Validating Image Path
+try:
+    hsv = cv.cvtColor(roi, cv.COLOR_BGR2HSV)
+except:
+    print("\nInvalid object Image Path")
+    print(
+        r"Try changing images\object.png to images\\object.png or Convert it to RAW string"
+    )
+    exit()
+
+
+target = cv.imread(
+    r"C:\Users\Admin\Desktop\ML_Projects\Image rec\images\abhiyan_appl.png"
+)  # Input target Image
+
+
+# Validating Image Path
+try:
+    hsvt = cv.cvtColor(target, cv.COLOR_BGR2HSV)
+except:
+    print("\nInvalid Target Image Path")
+    print(
+        r"Try changing images\object.png to images\\object.png or Convert it to RAW string"
+    )
+    exit()
 
 # calculating object histogram
 roihist = cv.calcHist([hsv], [0, 1], None, [180, 256], [0, 180, 0, 256])
