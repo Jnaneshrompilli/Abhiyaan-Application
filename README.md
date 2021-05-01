@@ -4,6 +4,8 @@ Name: Jnaneswara Rao Rompilli
 
 Roll Number: EE20B052
 
+Phone No: 9392654312
+
 Previous Experience
 -------------------
 • Learned basic OpenCV
